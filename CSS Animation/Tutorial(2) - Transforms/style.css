@@ -7,3 +7,53 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
+
+img {
+  width: 50%;
+  /* 
+    * translate: used for element move
+          ? translateX: for move right and left
+          ? translateY: for move up and down
+              ! we use a positive number to move down and right
+              ! We use a negative number to move up and left
+  */
+  /* transform: translateX(200px);
+  transform: translateX(-200px);
+  transform: translateY(150px);
+  transform: translateY(-150px); */
+
+  /* shorthand:           X  ,  Y */
+  /* transform: translate(-100px, 250px); */
+
+  /*
+    * scale: used for change size
+        ? scaleX & scaleY
+        ! i do not need to specify a unit
+  */
+  /* transform: scaleX(1);
+  transform: scaleY(1); */
+  /*
+    shorthand: scale()
+      ! if we pass an argument value, it counts for both
+                   X , Y
+  */
+  /* transform: scale(2, 0.5); */
+
+  /* 
+    * rotate: used to rotate the element in x or y or z
+  */
+  /* transform: rotateX(180deg);
+  transform: rotateY(180deg); */
+  /* 
+    we can use negative or positive number for rotateZ.
+    a negative number is counterclockwise and a positive number is similar to a clock
+  */
+  /* transform: rotateZ(45deg);
+  transform: rotateZ(-45deg); */
+
+  /* 
+    we can chain all conversion functions, but keep in mind that the order in which they are place is important
+    ! rotateZ changes the position of the X and Y axes
+  */
+  transform: translateY(150px) scale(0.5) rotateZ(90deg);
+}
