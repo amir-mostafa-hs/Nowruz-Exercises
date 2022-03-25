@@ -1,0 +1,89 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.grass,
+.sky,
+.road {
+  position: relative;
+}
+
+.sky {
+  height: 40%;
+  background: skyblue;
+}
+
+.grass {
+  height: 30%;
+  background: seagreen;
+}
+
+.road {
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+
+.lines {
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+/* animation for avatar */
+.mario {
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  /* set name */
+  animation-name: drive;
+  /* set duration  */
+  animation-duration: 3s;
+  /*
+   set fill mode 
+      ? forwards : used for stop in end
+      ? backwards : used to start in another position
+      ? both : combined high values
+  */
+  animation-fill-mode: both;
+  /* set delay for start */
+  animation-delay: 1s;
+  /*
+   to set the number of animation repetitions
+   ! the infinite value is used to set infinite repetition
+  */
+  animation-iteration-count: infinite;
+}
+
+.luigi {
+  position: absolute;
+  top: -170px;
+  left: 0px;
+  animation-name: drive;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  /* set direction */
+  animation-direction: reverse;
+}
+
+@keyframes drive {
+  /* start */
+  from {
+    transform: translateX(-15vw);
+  }
+  /* end */
+  to {
+    transform: translateX(120vw);
+  }
+}
