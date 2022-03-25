@@ -1,0 +1,62 @@
+body {
+  background-color: lightblue;
+  text-align: center;
+}
+.wrapper {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.circle {
+  display: block;
+  width: 100px;
+  padding: 50px 0;
+  margin: 50px auto;
+  background-color: pink;
+  color: white;
+  border-radius: 50%;
+  line-height: 0%;
+  cursor: pointer;
+  /*
+    az transition baraye tanzime zmane taghirat zaheri estefade mishavad
+  */
+  /* ? transition: duration , delay */
+  /* transition: 1s 250ms; */
+  /* 
+    ? mitavanim besorat jodagane ba estefade az esm har taghir zaman ejra an hara modiriyat konim 
+    ! da in halat aghar baraye yek kodam az taghir ha zamani set nashavad an taghir az zamane
+    !  pish farz estefade mikonad . zamane pish farz ramitavanin dar avalin value transition tanzim konim
+    # dar zir amane pish farz (3s) ast ke bayad haman aval biyayad
+  */
+  /* transition: 3s, background-color 0.5s, transform 1s;  */
+}
+
+/* .circle:hover {
+  background-color: rgb(255, 129, 150);
+  transform: rotate(360deg) translate(20px, 20px);
+  color: chartreuse;
+} */
+
+.cloud {
+  /* 
+    transition 4 paramert migirad
+        1- property(esme roydad)
+        2- duration(zamane rokhdad)
+        3- delay(delay baraye shro)
+        4- timing-function()
+  */
+  transition: 0.5s, transform 2s 0.3s cubic-bezier(1, 0, 0, 1);
+}
+.circle:hover + .cloud {
+  /* width: 200px; */
+  transform: scale(0.5) translateY(700px);
+}
+
+/* .cloud {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s;
+} */
