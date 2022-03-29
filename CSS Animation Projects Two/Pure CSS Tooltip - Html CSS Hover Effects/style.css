@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-body {
+* {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+}
+body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,8 +13,6 @@ body {
   background-color: #333;
 }
 ul {
-  margin: 0;
-  padding: 0;
   display: flex;
 }
 ul li {
@@ -57,8 +57,4 @@ ul li:hover .content {
   visibility: visible;
   opacity: 1;
   transform: translate(-50%, 0px);
-}
-ul li .content h2 {
-  margin: 0;
-  padding: 0;
 }
