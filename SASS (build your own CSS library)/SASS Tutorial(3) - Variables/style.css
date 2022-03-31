@@ -29,6 +29,7 @@ img {
 
 h1 {
   color: #00b7ff;
+  margin: 0.75rem;
 }
 
 a {
@@ -39,15 +40,25 @@ button {
   color: white;
   border: 0;
   background-color: #00b7ff;
+  border-radius: 20px;
+  padding: 0.75rem;
 }
 
 .error {
   color: #fa2d2d;
   border: #fa2d2d solid;
+  border-radius: 20px;
+  border-width: 1px;
+  margin: 0.75rem;
+  padding: 0.75rem;
 }
 
 .notification {
   color: #47f741;
   border: #47f741 solid;
+  border-radius: 20px;
+  border-width: 1px;
+  margin: 0.75rem;
+  padding: 0.75rem;
 }
 /*# sourceMappingURL=style.css.map */
