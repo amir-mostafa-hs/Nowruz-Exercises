@@ -1,0 +1,17 @@
+//! Declare Variables
+
+// them colors
+$primary: rgb(0, 183, 255);
+$secondary: rgb(71, 247, 65);
+$error: rgb(250, 45, 45);
+$info: rgb(246, 195, 28);
+
+// spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+
+//! we can use ( _ ) in first letter of word for ignore compiled
