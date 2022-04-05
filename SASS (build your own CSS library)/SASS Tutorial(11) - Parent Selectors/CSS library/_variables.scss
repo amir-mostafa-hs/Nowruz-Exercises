@@ -1,0 +1,63 @@
+//! Declare Variables
+
+// them colors
+$primary: rgb(0, 183, 255);
+$secondary: rgb(71, 247, 65);
+$error: rgb(250, 45, 45);
+$info: rgb(246, 195, 28);
+
+// color palette
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "error": $error,
+  "info": $info,
+  "blue": rgb(25, 25, 230),
+  "red": rgb(230, 25, 25),
+  "yellow": rgb(230, 230, 25),
+  "green": rgb(25, 230, 53),
+  "orange": rgb(255, 166, 0),
+  "purple": rgb(153, 0, 255),
+  "gray": rgb(128, 128, 128),
+  "black": rgb(0, 0, 0),
+  "white": rgb(255, 255, 255),
+);
+
+// use for get (red) value
+@debug map-get($colors, "red");
+// use for check yellow key
+@debug map-has-key($colors, "yellow");
+// use for remove kay and value
+@debug map-remove($colors, "error");
+// use for add key and value
+@debug map-merge(
+  $colors,
+  (
+    "pink": #ffc0cb,
+  )
+);
+
+// test use map-get
+.text-btn {
+  background-color: map-get($colors, "gray");
+}
+
+// spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+
+//! we can use ( _ ) in first letter of word for ignore compiled
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+
+// font sizes
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
