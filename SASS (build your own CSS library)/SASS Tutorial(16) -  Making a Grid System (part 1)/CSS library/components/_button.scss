@@ -1,0 +1,40 @@
+// use for reuse property
+//       declare parameter and default value
+@mixin btn($bg-color: rgb(226, 226, 226)) {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: $base-padding $base-padding * 2;
+  border-radius: $base-border-radius;
+  background-color: $bg-color;
+}
+
+.btn {
+  @include btn;
+}
+
+@each $key, $val in $colors {
+  .btn-#{$key} {
+    //   get btn parameter
+    @include btn($val);
+    &:hover {
+      background-color: lighten($val, 10);
+    }
+  }
+  .btn-outlined-#{$key} {
+    @include btn(rgb(255, 255, 255));
+    border: $base-border-thickness solid $val;
+    &:hover {
+      background-color: $val;
+    }
+  }
+  .btn-complement-#{$key} {
+    @include btn($val);
+    color: light-comp($val);
+    &:hover {
+      color: $val;
+      background-color: light-comp($val);
+    }
+  }
+}
