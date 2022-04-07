@@ -3796,6 +3796,83 @@ img {
   background-color: white;
 }
 
+.navbar, .navbar-primary, .navbar-secondary, .navbar-error, .navbar-info, .navbar-blue, .navbar-red, .navbar-yellow, .navbar-green, .navbar-orange, .navbar-purple, .navbar-gray, .navbar-black, .navbar-white, .navbar .container, .navbar-primary .container, .navbar-secondary .container, .navbar-error .container, .navbar-info .container, .navbar-blue .container, .navbar-red .container, .navbar-yellow .container, .navbar-green .container, .navbar-orange .container, .navbar-purple .container, .navbar-gray .container, .navbar-black .container, .navbar-white .container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navbar, .navbar-primary, .navbar-secondary, .navbar-error, .navbar-info, .navbar-blue, .navbar-red, .navbar-yellow, .navbar-green, .navbar-orange, .navbar-purple, .navbar-gray, .navbar-black, .navbar-white {
+  padding: 0.75rem 1.5rem;
+  -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .site-title, .navbar-primary .site-title, .navbar-secondary .site-title, .navbar-error .site-title, .navbar-info .site-title, .navbar-blue .site-title, .navbar-red .site-title, .navbar-yellow .site-title, .navbar-green .site-title, .navbar-orange .site-title, .navbar-purple .site-title, .navbar-gray .site-title, .navbar-black .site-title, .navbar-white .site-title {
+  font-size: 1.5rem;
+}
+
+.navbar-primary {
+  background-color: #00b7ff;
+}
+
+.navbar-secondary {
+  background-color: #47f741;
+}
+
+.navbar-error {
+  background-color: #fa2d2d;
+}
+
+.navbar-info {
+  background-color: #f6c31c;
+}
+
+.navbar-blue {
+  background-color: #1919e6;
+}
+
+.navbar-red {
+  background-color: #e61919;
+}
+
+.navbar-yellow {
+  background-color: #e6e619;
+}
+
+.navbar-green {
+  background-color: #19e635;
+}
+
+.navbar-orange {
+  background-color: #ffa600;
+}
+
+.navbar-purple {
+  background-color: #9900ff;
+}
+
+.navbar-gray {
+  background-color: gray;
+}
+
+.navbar-black {
+  background-color: black;
+}
+
+.navbar-white {
+  background-color: white;
+}
+
 .p-0 {
   padding: 0;
 }
