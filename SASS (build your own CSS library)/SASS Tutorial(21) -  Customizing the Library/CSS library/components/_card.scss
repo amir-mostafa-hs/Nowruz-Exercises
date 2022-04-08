@@ -1,0 +1,25 @@
+.card {
+  display: block;
+  padding: $base-padding;
+  border: $base-border-thickness solid rgb(220, 220, 220);
+  box-shadow: $base-box-shadow;
+  border-radius: $base-border-radius / 4;
+
+  .card-title {
+    font-size: $font-size-lg;
+    padding-bottom: $base-padding;
+    font-weight: bold;
+  }
+
+  .card-body {
+    font-size: $base-font-size;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+@debug "hello AMH";
+@debug 10 / 3;
+@debug max(10px, 5px, 15px, 30px);
