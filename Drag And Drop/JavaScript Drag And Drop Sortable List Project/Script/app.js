@@ -20,7 +20,7 @@ let dragStartIndex;
 
 createList();
 
-// Insert list items into DOM
+// insert list items
 function createList() {
   [...softwareCompanies]
     .map((a) => ({ value: a, sort: Math.random() }))
@@ -39,4 +39,69 @@ function createList() {
 
       draggableList.appendChild(listItem);
     });
+  addEventListeners();
 }
+
+function addEventListeners() {
+  const draggables = document.querySelectorAll(".draggable");
+  const dragListItems = document.querySelectorAll(".draggableList li");
+
+  draggables.forEach((draggable) => {
+    draggable.addEventListener("dragstart", dragStart);
+  });
+
+  dragListItems.forEach((item) => {
+    item.addEventListener("dragover", dragOver);
+    item.addEventListener("drop", dragDrop);
+    item.addEventListener("dragenter", dragEnter);
+    item.addEventListener("dragleave", dragLeave);
+  });
+}
+
+function dragStart() {
+  dragStartIndex = this.closest("li").getAttribute("dataIndex");
+}
+
+function dragEnter() {
+  this.classList.add("over");
+}
+
+function dragLeave() {
+  this.classList.remove("over");
+}
+
+function dragOver(e) {
+  e.preventDefault();
+}
+
+function dragDrop() {
+  const dragEndIndex = this.getAttribute("dataIndex");
+  swapItems(dragStartIndex, dragEndIndex);
+
+  this.classList.remove("over");
+}
+
+// swap list items
+function swapItems(fromIndex, toIndex) {
+  const itemOne = listItems[fromIndex].querySelector(".draggable");
+  const itemTwo = listItems[toIndex].querySelector(".draggable");
+
+  listItems[fromIndex].appendChild(itemTwo);
+  listItems[toIndex].appendChild(itemOne);
+}
+
+// check the order of list items
+function checkOrder() {
+  listItems.forEach((listItem, index) => {
+    const softwareName = listItem.querySelector(".draggable").innerText.trim();
+
+    if (softwareName !== softwareCompanies[index]) {
+      listItem.classList.add("wrong");
+    } else {
+      listItem.classList.remove("wrong");
+      listItem.classList.add("right");
+    }
+  });
+}
+
+checkBtn.addEventListener("click", checkOrder);
