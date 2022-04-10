@@ -27,11 +27,11 @@ function createList() {
     .sort((a, b) => a.sort - b.sort)
     .forEach((person, index) => {
       const listItem = document.createElement("li");
-      listItem.setAttribute("data-index", index);
+      listItem.setAttribute("dataIndex", index);
       listItem.innerHTML = `
         <span class="number">${index + 1}</span>
         <div class="draggable" draggable="true">
-          <p class="person-name">${person.value}</p>
+          <p class="softwareName">${person.value}</p>
           <i class="fas fa-grip-lines"></i>
         </div>
       `;
