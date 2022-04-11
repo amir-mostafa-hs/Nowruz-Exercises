@@ -40,8 +40,13 @@ document.cookie =
 // Convert cookies values to an object
 const cookies = document.cookie.replaceAll(";", "").split(" ");
 const cookiesValue = cookies.map((item) => item.split("="));
-
 const cookiesObject = {};
 cookiesValue.forEach((item) => (cookiesObject[item[0]] = item[1]));
 console.log(cookiesObject);
 console.log(cookiesObject.userValue);
+
+// !How to remove cookies
+Object.keys(cookiesObject).forEach((item) => {
+  console.log(item);
+  document.cookie = `${item} = ;expires = ${new Date(1900, 0, 1).toString()}`;
+});
