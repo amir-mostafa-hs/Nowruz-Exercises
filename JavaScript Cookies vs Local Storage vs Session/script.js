@@ -25,3 +25,23 @@ const userEmail = sessionStorage.getItem("Email");
 console.log(`User Email is: ${userEmail}`);
 
 sessionStorage.removeItem("Email");
+
+// !Cookies
+/*
+    like object.
+    we can set the expires time to cookies.
+*/
+document.cookie =
+  "userValue = admin; expires = " + new Date(9999, 8, 9, 9, 9, 9).toString();
+
+document.cookie =
+  "userPass = 12345; expires = " + new Date(9999, 8, 9, 9, 9, 9).toString();
+
+// Convert cookies values to an object
+const cookies = document.cookie.replaceAll(";", "").split(" ");
+const cookiesValue = cookies.map((item) => item.split("="));
+
+const cookiesObject = {};
+cookiesValue.forEach((item) => (cookiesObject[item[0]] = item[1]));
+console.log(cookiesObject);
+console.log(cookiesObject.userValue);
