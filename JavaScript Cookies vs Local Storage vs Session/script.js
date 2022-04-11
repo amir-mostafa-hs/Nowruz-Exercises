@@ -11,3 +11,5 @@ localStorage.setItem("Name", "AmirMostafa");
 const userName = localStorage.getItem("Name");
 
 console.log(`User Name is: ${userName}`);
+
+localStorage.removeItem("Name");
