@@ -13,3 +13,15 @@ const userName = localStorage.getItem("Name");
 console.log(`User Name is: ${userName}`);
 
 localStorage.removeItem("Name");
+
+// !Session Storage
+/*
+    like local storage method 
+*/
+sessionStorage.setItem("Email", "email@email.com");
+
+const userEmail = sessionStorage.getItem("Email");
+
+console.log(`User Email is: ${userEmail}`);
+
+sessionStorage.removeItem("Email");
