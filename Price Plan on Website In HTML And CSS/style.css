@@ -6,7 +6,7 @@
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background: linear-gradient(to right, #8e2de2, #4a00e0);
 }
@@ -25,6 +25,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   column-gap: 25px;
+  row-gap: 25px;
 }
 
 .price-column {
@@ -65,4 +66,22 @@
   color: rgb(216, 50, 50);
   font-weight: bold;
   margin-right: 8px;
+}
+
+.price-column button {
+  width: 100%;
+  padding: 14px 0;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  border: 1px solid rgb(216, 50, 50);
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.price-column button:hover {
+  background-color: rgb(216, 50, 50);
+  transform: scale(1.1);
 }
