@@ -70,3 +70,24 @@ form button {
   display: block;
   margin: 30px auto 10px;
 }
+
+.input-group span {
+  position: absolute;
+  bottom: 12px;
+  right: 17px;
+  font-size: 14px;
+  color: red;
+}
+
+#submit-error {
+  font-size: 14px;
+  color: red;
+}
+
+.hidden {
+  /* display: none; */
+}
+
+.-error {
+  background-color: black;
+}
