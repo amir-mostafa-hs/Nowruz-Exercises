@@ -22,26 +22,41 @@
             type="text"
             placeholder="Enter your name"
             id="contactName"
-            onkeyup="validateName('Name')"
+            onkeyup="verification('Name')"
           />
           <span id="name-error"></span>
         </div>
 
         <div class="input-group">
           <label>Phone No.</label>
-          <input type="tel" placeholder="123 456 7890" />
-          <span id="phone-error">Phone is required</span>
+          <input
+            type="tel"
+            placeholder="123 456 7890"
+            id="contactPhone"
+            onkeyup="verification('Phone')"
+          />
+          <span id="phone-error"></span>
         </div>
 
         <div class="input-group">
           <label>Email Id</label>
-          <input type="email" placeholder="Enter Email" />
-          <span id="email-error">Email is required</span>
+          <input
+            type="email"
+            placeholder="Enter email"
+            id="contactEmail"
+            onkeyup="verification('Email')"
+          />
+          <span id="email-error"></span>
         </div>
 
         <div class="input-group">
           <label>Your Message</label>
-          <textarea rows="5" placeholder="Enter your message"></textarea>
+          <textarea
+            rows="5"
+            placeholder="Enter your message"
+            id="contactMessage"
+            onkeyup="verification('Message')"
+          ></textarea>
           <span id="massage-error">Massage is required</span>
         </div>
 
