@@ -79,7 +79,8 @@ form button {
   color: red;
 }
 
-.input-group span i {
+.input-group span i,
+#submit-error i {
   color: seagreen;
 }
 
