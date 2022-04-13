@@ -79,15 +79,11 @@ form button {
   color: red;
 }
 
+.input-group span i {
+  color: seagreen;
+}
+
 #submit-error {
   font-size: 14px;
   color: red;
-}
-
-.hidden {
-  /* display: none; */
-}
-
-.-error {
-  background-color: black;
 }
