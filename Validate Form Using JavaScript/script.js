@@ -21,5 +21,13 @@ function verification(itemName) {
     } else {
       errors[1].innerHTML = "<i class='fas fa-check-circle'></i>";
     }
+  } else if (itemName === "Email") {
+    if (item.length === 0) {
+      errors[2].textContent = "Email is required";
+    } else if (!item.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+      errors[2].textContent = "Email invalid";
+    } else {
+      errors[2].innerHTML = "<i class='fas fa-check-circle'></i>";
+    }
   }
 }
