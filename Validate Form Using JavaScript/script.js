@@ -1,6 +1,6 @@
 const errors = document.querySelectorAll("span[id*='error']");
 
-function verification(itemName) {
+function validation(itemName) {
   const item = document.querySelector(`#contact${itemName}`).value;
 
   if (itemName === "Name") {
@@ -28,6 +28,13 @@ function verification(itemName) {
       errors[2].textContent = "Email invalid";
     } else {
       errors[2].innerHTML = "<i class='fas fa-check-circle'></i>";
+    }
+  } else if (itemName === "Message") {
+    const requiredCharacters = 30 - item.length;
+    if (requiredCharacters > 0) {
+      errors[3].textContent = `${requiredCharacters} more characters required`;
+    } else {
+      errors[3].innerHTML = "<i class='fas fa-check-circle'></i>";
     }
   }
 }
