@@ -38,3 +38,28 @@ textarea {
 textarea {
   min-height: 200px;
 }
+
+/* post list */
+.post {
+  padding: 16px;
+  background: white;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.post h2 {
+  margin: 0;
+}
+.post .psot-creator-name {
+  margin: 3px 5px 10px;
+  padding: 5px;
+  font-size: 0.7rem;
+  background-color: gainsboro;
+  display: inline-block;
+  border-radius: 5px;
+}
+.post p {
+  margin-top: 0;
+}
+.post a {
+  color: #36cca2;
+}
