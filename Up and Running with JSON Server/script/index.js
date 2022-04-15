@@ -26,7 +26,7 @@ const rendetPosts = async () => {
       post.body.split(" ").splice(0, 15).join(" ") + " ...";
 
     const readMore = document.createElement("a");
-    readMore.href = "./details.html";
+    readMore.href = `./details.html?id=${post.id}`;
     readMore.textContent = "Read More ...";
 
     div.append(postTitle, creatorName, textBody, readMore);
