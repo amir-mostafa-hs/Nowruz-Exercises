@@ -1,8 +1,7 @@
 const container = document.querySelector(".blogs");
-window.addEventListener("DOMContentLoaded", () => rendetPosts());
 
 const rendetPosts = async () => {
-  const postsApiUrl = "http://localhost:3000/posts";
+  const postsApiUrl = "http://localhost:3000/posts?_sort=id&_order=desc";
   const usersApiUrl = "http://localhost:3000/users";
 
   const responsePostsData = await (await fetch(postsApiUrl)).json();
@@ -33,3 +32,5 @@ const rendetPosts = async () => {
     container.append(div);
   });
 };
+
+window.addEventListener("DOMContentLoaded", () => rendetPosts());

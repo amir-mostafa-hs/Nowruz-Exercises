@@ -1,8 +1,6 @@
 const id = new URLSearchParams(window.location.search).get("id");
 const container = document.querySelector(".details");
 
-window.addEventListener("DOMContentLoaded", () => rendetDetails());
-
 const rendetDetails = async () => {
   const postsApiUrl = "http://localhost:3000/posts/";
 
@@ -16,3 +14,5 @@ const rendetDetails = async () => {
 
   container.append(title, textBody);
 };
+
+window.addEventListener("DOMContentLoaded", () => rendetDetails());
