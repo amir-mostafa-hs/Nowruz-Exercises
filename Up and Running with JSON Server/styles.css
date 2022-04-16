@@ -63,3 +63,13 @@ textarea {
 .post a {
   color: #36cca2;
 }
+
+button {
+  padding: 5px 15px;
+  font-family: "Roboto";
+  border: none;
+  background-color: #36cca2;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+}

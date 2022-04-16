@@ -1,8 +1,13 @@
 const container = document.querySelector(".blogs");
+const searchForm = document.querySelector(".search");
 
-const rendetPosts = async () => {
-  const postsApiUrl = "http://localhost:3000/posts?_sort=id&_order=desc";
+const rendetPosts = async (term) => {
+  const postsApiUrl =
+    "http://localhost:3000/posts?_sort=id&_order=desc" +
+    (term ? `&q=${term}` : "");
   const usersApiUrl = "http://localhost:3000/users";
+
+  container.innerText = "";
 
   const responsePostsData = await (await fetch(postsApiUrl)).json();
   const responseUsersData = await (await fetch(usersApiUrl)).json();
@@ -32,5 +37,10 @@ const rendetPosts = async () => {
     container.append(div);
   });
 };
+
+searchForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  rendetPosts(evt.target.term.value.trim());
+});
 
 window.addEventListener("DOMContentLoaded", () => rendetPosts());
